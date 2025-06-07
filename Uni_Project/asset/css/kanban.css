@@ -1,0 +1,100 @@
+/* Kanban Board Styles */
+.kanban-list {
+    min-width: 280px;
+    background-color: #e9ecef;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    flex-shrink: 0;
+    height: fit-content;
+}
+
+.kanban-card {
+    background: white;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.kanban-card:hover {
+    background: #f8f9fa;
+}
+
+.add-list-btn {
+    min-width: 280px;
+    background: rgba(233, 236, 239, 0.5);
+    border: 2px dashed #adb5bd;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    flex-shrink: 0;
+    height: fit-content;
+    cursor: pointer;
+}
+
+/* Drawer Styles */
+.card-details-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1050;
+    width: 320px;
+    height: 100vh;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+.card-details-drawer.show {
+    transform: translateX(0);
+}
+
+.drawer-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.drawer-backdrop.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.drawer-header {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.drawer-close-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: transparent;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+/* Scrollbar Styles */
+#kanbanContainer::-webkit-scrollbar {
+    height: 8px;
+}
+
+#kanbanContainer::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}

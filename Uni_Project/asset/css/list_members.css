@@ -1,0 +1,130 @@
+html{
+    overflow-x: hidden;
+}
+.session-msg{
+    animation-name: hideMsg;
+    animation-iteration-count: 1;
+    animation-delay: 0;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+}
+@keyframes hideMsg {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.add_member_link{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 70px;
+    margin-top: 50px;
+}
+.add_member_link a{
+    color: #2a5298;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    transition: ease-in-out .4s;
+    padding: 10px;
+    border-radius: 20px;
+}
+.add_member_link a:hover{
+    
+    color: #FFF;
+    background-color:  #2a5298;
+}
+.table_container table th {
+    /* margin-top: 10px; */
+    color: #2a5298;
+    text-align: center;
+}
+
+.table_container table td{
+    text-align: center;
+    color:  #2a5298;
+}
+/* .table_container table td.action{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 3px;
+    justify-content: flex-start;
+    align-items: center;
+} */
+.table_container table tr{
+    height: auto
+}
+.table_container table .picANDname{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* height: 100%; */
+    gap: 20px;
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+div.modal-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+img.display_pic{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+div.modal-body div.details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+div.modal-body div.details div.content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+div.modal-body div.details div.content span{
+    color: gray;
+    display: block;
+}
+div.modal-body div.details div.content p{
+    background-color: rgba(206, 202, 202, 0.822);
+    border-radius: 20px;
+    height: 25px;
+    width: auto;
+    padding: 5px 10px;
+    line-height: .8;
+}
+#modalRole ,#modalUsername{
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #2a5298;
+}
+#modalEmail{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #2a5298;
+}
+div.delete-user .fa-circle-xmark{
+    font-size: 2.8rem;
+    color: red;
+}
+div.delete-user  p{
+    color: gray;
+}
+.list-article{
+    height: auto;
+    /* width: 100%; */
+}

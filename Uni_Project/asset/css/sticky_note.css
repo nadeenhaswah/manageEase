@@ -1,0 +1,167 @@
+article{
+    /* margin-top: 50px; */
+    margin-left: 220px;
+    padding: 50px;
+    width: calc(100vw - 220px);
+    height: 100vh ;
+    /* height: auto; */
+    /* z-index: 90; */
+}
+@media (max-width: 715px) {
+    article{
+        margin-left: 24px;
+        width: 100vw
+        
+    }
+}
+@media (max-width:1120px) {
+    article{
+        height: calc(140vh );
+    }
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: 
+    repeating-linear-gradient(
+        to left,
+        transparent 0 50px, 
+        #2a5298 50px 51px
+    ),
+    repeating-linear-gradient(
+        to bottom,
+        transparent 0 50px, 
+        #2a5298 50px 51px
+    );
+    position: relative;
+}
+form{
+    background-color: #eee;
+    width: max-content;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 24px;
+    display: flex;
+    gap: 10px;
+}
+form input:not([id=msg_type]), button{
+    width: 30px;
+    height: 30px;
+   
+    border: none;
+    background-color: transparent;
+    font-size: large;
+    cursor: pointer;
+}
+
+form input#msg_type{
+    border: none;
+    background-color: transparent;
+}
+
+form input::-webkit-color-swatch-wrapper{
+    padding: 0;
+}
+form input::-webkit-color-swatch{
+    border-radius: 50%;
+}
+#list textarea{
+    all: unset;
+    color: #d6d6d6;
+    resize: both;
+}
+#list {
+    position: relative;
+}
+#list .note{
+    background-color: #333;
+    width: max-content;
+    border-top: 30px solid #6851f0;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px #0004;
+    padding: 10px;
+    position: absolute;
+    top: 130px;
+    left: 50px;
+}
+#list .note span:nth-child(1){
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    height: 30px;
+    font-family: cursive;
+    font-size: large;
+    padding-right: 10px;
+    cursor: pointer;
+}
+#list .note span:nth-child(2){
+   
+    position: absolute;
+    bottom:100%;
+    left: 10px;
+    
+    color: white;
+    font-family: cursive;
+    font-size: large;
+    padding-right: 10px;
+    cursor: pointer;
+}
+#list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#list .note {
+    background-color: #333;
+    border-top: 30px solid var(--note-color, #6851f0);
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    position: absolute;
+    cursor: grab;
+    resize: both;
+    overflow: hidden;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+#list .note:active {
+    cursor: grabbing;
+}
+
+#list .note .close {
+    position: absolute;
+    top: -25px;
+    right: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    z-index: 10;
+}
+
+#list .note .title {
+    position: absolute;
+    top: -25px;
+    left: 10px;
+    color: white;
+    font-family: cursive;
+    font-size: 16px;
+    max-width: calc(100% - 40px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#list .note textarea {
+    all: unset;
+    color: #d6d6d6;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    resize: none;
+}
